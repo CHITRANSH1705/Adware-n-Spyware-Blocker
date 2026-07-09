@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WARDEN</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="crt"></div>
+
+  <header class="titlebar">
+    <div class="brand">
+      <span class="brand-mark">WARDEN</span><span class="cursor">_</span>
+    </div>
+    <div class="brand-sub">// network + DOM threat blocker</div>
+  </header>
+
+  <div class="protection-row">
+    <div class="protection-label">
+      <span id="protection-state" class="state-dot"></span>
+      <span id="protection-text">PROTECTION ON</span>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="protection-toggle" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="site-row">
+    <div class="site-name" id="site-name">// no active tab_</div>
+    <button id="trust-btn" class="trust-btn">TRUST SITE</button>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value" id="stat-network">0</div>
+      <div class="stat-label">network blocked</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="stat-dom">0</div>
+      <div class="stat-label">dom removed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="stat-scripts">0</div>
+      <div class="stat-label">scripts flagged</div>
+    </div>
+  </div>
+
+  <div class="scripts-note" id="scripts-note"></div>
+
+  <footer class="footer">
+    <span>lifetime blocked: <strong id="lifetime-count">0</strong></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
